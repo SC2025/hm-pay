@@ -232,6 +232,14 @@ margin: 10px;
 justify-content: center;
 align-items: center;
 }
+.button2{
+  width: fit-content;
+    background-color: rgb(224, 224, 188);
+    font-weight: 1000;
+    font-size: 20px;
+    padding: 3px;
+    border: 2px black;
+}
 </style>
 </head>
 <body id="body">
@@ -273,7 +281,11 @@ align-items: center;
 
 <div id="section_B" >
 <div class="main_hedding" id="section_B_h"></div>
-<select  name="" id="product-name" onchange="alert(`${document.getElementById(`name`).value} you select  ${this.options[this.selectedIndex].text} is conform to proceed `)">
+<select  name="" id="product-name" 
+onchange="alert(`${document.getElementById(`name`).value} 
+you select  ${this.options[this.selectedIndex].text} 
+Please select quantity.
+and proceed to payment.`)">
 <option  value="00" >Select Product</option>
 
 <option value="9">Steel hangers</option>
@@ -303,12 +315,13 @@ align-items: center;
 </p>
 <div >
 <!-- <img id="qr"  src="qr.jpg"  alt=""> -->
+
 <div class="paymentall">
     <marquee
     behavior="alternate"
     id="marquee"
     scrollamount = "7">
-
+    <div class="button2">------Payment App option-----</div>
     <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
     <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
     <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
@@ -432,6 +445,9 @@ document.getElementById("name").disabled = true;
 document.getElementById("address").disabled = true
 document.getElementById("addres_add").disabled = true;
 // alert( document.getElementById("name").value +" "+"Thank you" + " your name and addres is save ; please fill product details");
+alert(`${name_of_custemer_a} 
+personal information save successfully;
+fill product information.`)
 sec_b.style.opacity = 1;
 sec_a.style.opacity = 0.3;
 };
@@ -523,11 +539,15 @@ after payment note down the last 4 digits of UPI transaction id`)
 /* background-color: rgb(215, 235, 177); */
 setInterval(() => {
 
-document.getElementById("colour_change").style.backgroundColor = "rgb(228, 162, 81)"
+document.getElementById("colour_change").style.backgroundColor = "black"
+document.getElementById("colour_change").style.color = "white"
+
 }, 1000);
 setInterval(() => {
 
-document.getElementById("colour_change").style.backgroundColor = " rgb(215, 235, 177)"
+document.getElementById("colour_change").style.backgroundColor = "white"
+document.getElementById("colour_change").style.color = "black"
+
 }, 2000);
 
 document.getElementById("hide_procede_tp_payment_btn_1").disabled = true;
@@ -557,11 +577,12 @@ document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3
 
 
 setTimeout(() => {
-    alert(`${name_of_custemer} या QR कोड वर कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
-    UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि लिहा.`)
+    alert(`${name_of_custemer}
+    कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
+    पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`)
 }, 2000);
 
-}
+} 
 
 
 
