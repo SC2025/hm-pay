@@ -188,6 +188,49 @@ align-items: center;
 justify-content: center;
 display: flex;
 }
+.paymentall{
+width: 100;
+display: flex;
+border: 1px solid;
+}
+/* .gp{
+        border-radius: 50%;
+       
+        border: 20px rgb(255, 18, 18);
+height: 70px;
+padding: 5px;
+text-align: center;
+justify-content: center;
+align-items: center;
+display: flex;
+} */
+.gpbtn{
+        border-radius: 100%;
+        width: fit-content;
+        background-color: black;
+        padding: 3px;
+        text-align: center;
+justify-content: center;
+align-items: center;
+margin: 10px;
+}
+.google_pay3{height: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+}
+.gp{
+        height: 50px;
+        display: flex;
+        border-radius: 100%;
+        width: fit-content;
+        background-color: black;
+        padding: 1px;
+        text-align: center;
+justify-content: center;
+align-items: center;
+}
 </style>
 </head>
 <body id="body">
@@ -257,7 +300,22 @@ display: flex;
 
 </p>
 <div >
-<img id="qr"  src="qr.jpg"  alt="">
+<!-- <img id="qr"  src="qr.jpg"  alt=""> -->
+<div class="paymentall">
+    <marquee
+    behavior="alternate"
+    id="marquee"
+    scrollamount = "7">
+
+    <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
+    <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
+    <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
+   
+   
+    </marquee>
+    
+
+</div>
 </div>
 
 <p  id="colour_change" class="big_font">Enter UPI transactiion id last 4 digit<input  id="transaction_id" value="" type="text"></p>
@@ -507,7 +565,7 @@ let name_of_custemer_a = document.getElementById("name").value;
 
 document.getElementById("section_D_h").innerHTML = `- ${name_of_custemer_a} your order details -`;
 
-document.getElementById("qr").style.opacity = 1;
+// document.getElementById("qr").style.opacity = 1;
 
 selectElement = document.querySelector('#product-name');
 output1 = selectElement.value;
