@@ -17,23 +17,16 @@ opacity: 1;
 #get-bill{
 font-weight: 1000;
 }
-#product-quntity,#get-bill,#product-name{
-opacity: 1;
-}
-#qr{
-height: 200px;
-width: 200px;
-opacity: 1;
-}
 
-/* #section_A>p,input ,#hide_procede_tp_payment_btn_1{
-height: 0px;
-} */
+
+
+
 
 #section_A{
 border: 2PX solid rgb(252, 45, 30);
 opacity: 1;
 padding: 10px;
+
 /* background-color: rgb(228, 162, 81); */
 /* background-color: rgb(215, 235, 177); */
 gap: 10px;
@@ -86,13 +79,15 @@ width: 20px;
 .button{
 height: 40px;
 width: 35vh;
-background-color: rgb(0, 0, 0);
+background-color:#5783db;
 color: rgb(255, 255, 255);
-border: 3px solid rgb(194, 147, 119);
+border: 3px solid rgb(0, 0, 0);
 padding: 2px;
-font-weight: 100;
+font-weight: 500;
 margin-top: 3px;
 font: bold;
+border-radius: 100PX;
+
 }
 
 .STAR{
@@ -155,15 +150,21 @@ width: 1px;
 background-color: brown;
 display: flex;
 } */
+BODY{
+    background-color: rgb(223, 229, 234);
+}
 #section_A>P{
 font-size: 15PX;
 }
 #addres_add,#product-quntity,#product-name{
 height: 30PX;
-background-color: rgb(198, 237, 237);
+background-color: rgb(220, 236, 217);
 margin-top: 2PX;
 margin-bottom: 2PX;
 border: 1 px solid black;
+font: bold;
+font-weight: 1000;
+color: rgb(255, 0, 0);
 }
 #product-name>option{
 border: 1px solid black;
@@ -239,9 +240,10 @@ align-items: center;
 <body>
 
 <div >
+    <div class="name"> सह्याद्री  कलेक्शन</div>
 <div  id="section_A">
   
-        <div class="name"> सह्याद्री  कलेक्शन</div>
+        
     
 <div class="main_hedding" id="section_A_h">-Personal Details-</div>
 <p>Name:- <input id="name" type="text"></p>
@@ -431,6 +433,7 @@ document.getElementById("address").disabled = true
 document.getElementById("addres_add").disabled = true;
 // alert( document.getElementById("name").value +" "+"Thank you" + " your name and addres is save ; please fill product details");
 sec_b.style.opacity = 1;
+sec_a.style.opacity = 0.3;
 };
 
 
@@ -450,13 +453,16 @@ function section_B(){
 
 
 
-sec_a.style.opacity = 0;
-sec_b.style.opacity = 0;
-sec_a.style.width= "0px";
-sec_b.style.width = "0px";
-sec_a.style.height= "0px";
-sec_b.style.height = "0px";
 
+sec_b.style.opacity = 0.3;
+// sec_a.style.width= "0px";
+// sec_b.style.width = "0px";
+// sec_a.style.height= "0px";
+// sec_b.style.height = "0px";
+// sec_a.style.font= "0px";
+// sec_b.style.font = "0px";
+// sec_a.style.height= "0px";
+// sec_b.style.height = "0px";
 document.getElementById("product-name").disabled = true;
 
 
@@ -626,7 +632,7 @@ section_b()
 }else{
 // sec_a.style.height = "2px";
 // sec_b.style.height = "2px";
-sec_c.style.height = "2px";
+// sec_c.style.height = "2px";
 sec_c.style.opacity = 1;
 sec_d.style.opacity = 1;
 
