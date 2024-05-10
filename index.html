@@ -344,7 +344,7 @@ and proceed to payment.`)">
 <div id="section_D">
 <p class="main_hedding" id="section_D_h"></p>
 <BR>
-<div class="sec_d_element"> <p>name of custemer :- </p><P id="name_of_custemer"></P></div>
+<div class="sec_d_element"> <p>name of customer :- </p><P id="name_of_customer"></P></div>
 <BR>
 <div class="sec_d_element"> <p>Villege Name :- </p><P id="addres_add_se"></P></div>
 <br>
@@ -356,7 +356,7 @@ and proceed to payment.`)">
 <BR>
 <div class="sec_d_element"> <p>product quantity :- </p><P id="product_quantity"></P></div>
 <BR>
-<div class="sec_d_element"> <p>one product_prise :- </p><P id="one_product_prise"></P></div>
+<div class="sec_d_element"> <p>one product_price :- </p><P id="one_product_price"></P></div>
 <BR>
 <div class="sec_d_element"> <p>total :- </p><P id="total_product_prize"></P></div>
 <BR>
@@ -408,12 +408,12 @@ let full_address = document.getElementById("address");
 
 function section_A() {
 
-let name_of_custemer_a = document.getElementById("name").value;
-// let name_of_custemer_a_2_9 = parseInt(document.getElementById("name").value);
-document.getElementById("section_B_h").innerHTML = `- ${name_of_custemer_a } select product -`;
+let name_of_customer_a = document.getElementById("name").value;
+// let name_of_customer_a_2_9 = parseInt(document.getElementById("name").value);
+document.getElementById("section_B_h").innerHTML = `- ${name_of_customer_a } select product -`;
 
 
-// console.log(name_of_custemer_a_2_9 )
+// console.log(name_of_customer_a_2_9 )
 
 se = document.querySelector('#addres_add');
 output3 = se.value;
@@ -428,14 +428,14 @@ window.location.reload()
 }
 
 else if(document.getElementById("address").value == ``|| null)
-{alert(`${name_of_custemer_a} please enter full address; without this information order is not confirmed `)
+{alert(`${name_of_customer_a} please enter full address; without this information order is not confirmed `)
 document.getElementById("address").style.backgroundColor = "red"
 window.location.reload()
 }
 
 else if(
 document.getElementById("addres_add").value == "select city" || ``|| null
-){alert(`${name_of_custemer_a} please select villege option; without this information order is not confirmed `)
+){alert(`${name_of_customer_a} please select villege option; without this information order is not confirmed `)
 document.getElementById("addres_add").style.backgroundColor = "red"
 window.location.reload()
 }
@@ -445,7 +445,7 @@ document.getElementById("name").disabled = true;
 document.getElementById("address").disabled = true
 document.getElementById("addres_add").disabled = true;
 // alert( document.getElementById("name").value +" "+"Thank you" + " your name and addres is save ; please fill product details");
-alert(`${name_of_custemer_a} 
+alert(`${name_of_customer_a} 
 personal information save successfully;
 fill product information.`)
 sec_b.style.opacity = 1;
@@ -482,7 +482,7 @@ sec_b.style.opacity = 0.3;
 document.getElementById("product-name").disabled = true;
 
 
-let name_of_custemer = document.getElementById("name").value;
+let name_of_customer = document.getElementById("name").value;
 let full_address = document.getElementById("address").value;
 
 
@@ -522,16 +522,16 @@ get product discount is = 20%
 product quantity = ${output2}
 <br>
 one ${name_product_name} prize is = ${ONE_PRODUCT_PRIZE} RS`;
-document.getElementById("qr_info_2").innerHTML =`<h2>total ${output2} product prise is = ${output1 * output2} RS</h2>`;
+document.getElementById("qr_info_2").innerHTML =`<h2>total ${output2} product price is = ${output1 * output2} RS</h2>`;
 
 sec_c.style.opacity = 1;
 
-alert(`${name_of_custemer}
+alert(`${name_of_customer}
 you order is = ${name_product_name}
 get discount is = 20%
 one ${name_product_name} prize is = ${ONE_PRODUCT_PRIZE} RS
 product quantity = ${output2}
-total ${output2} product prise is = ${output1 * output2} RS
+total ${output2} product price is = ${output1 * output2} RS
 scan following QR code and  pay = ${output1 * output2} RS
 after payment note down the last 4 digits of UPI transaction id`)
 
@@ -577,13 +577,13 @@ document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3
 
 
         setTimeout(() => {
-    alert(`${name_of_custemer}
+    alert(`${name_of_customer}
     कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
     पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`)
 }, 2000);
 
 setInterval(() => {
-    alert(`${name_of_custemer}
+    alert(`${name_of_customer}
     कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
     पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`);
 
@@ -601,9 +601,9 @@ setInterval(() => {
 
 
 function section_C(){
-let name_of_custemer_a = document.getElementById("name").value;
+let name_of_customer_a = document.getElementById("name").value;
 
-document.getElementById("section_D_h").innerHTML = `- ${name_of_custemer_a} your order details -`;
+document.getElementById("section_D_h").innerHTML = `- ${name_of_customer_a} your order details -`;
 
 // document.getElementById("qr").style.opacity = 1;
 
@@ -622,7 +622,7 @@ let name_product_name = select.options[select.selectedIndex].text ; //returns th
 let transactionid = document.getElementById("transaction_id").value;
 
 
-let name_of_custemer = document.getElementById("name").value;
+let name_of_customer = document.getElementById("name").value;
 
 //  let selectADDRESS = document.getElementById("addres_add");
 // let addres_add = selectADDRESS.options[selectADDRESS.selectedIndex].text ; //returns the entire select with all the options
@@ -633,14 +633,14 @@ output3 = se.value;
 document.getElementById("addres_add_se").innerHTML = output3
 console.log(output3)
 
-document.getElementById("name_of_custemer").innerHTML = ` ${name_of_custemer} `;
+document.getElementById("name_of_customer").innerHTML = ` ${name_of_customer} `;
 document.getElementById("addres_add").innerHTML = ` ${output3} `;
 document.getElementById("Address_NEAR_BY").innerHTML =` ${full_address.value}`;
 document.getElementById("product_name").innerHTML =` ${name_product_name} `;
 document.getElementById("product_quantity").innerHTML =` ${output2} `;
-document.getElementById("one_product_prise").innerHTML =` ${select.options[select.selectedIndex].text} prize is = ${ONE_PRODUCT_PRIZE} RS `;
+document.getElementById("one_product_price").innerHTML =` ${select.options[select.selectedIndex].text} prize is = ${ONE_PRODUCT_PRIZE} RS `;
 document.getElementById("get_discount").innerHTML =`20%`;
-document.getElementById("total_product_prize").innerHTML =`${output2} product prise is = ${output1 * output2} RS`;
+document.getElementById("total_product_prize").innerHTML =`${output2} product price is = ${output1 * output2} RS`;
 document.getElementById("transaction_ID").innerHTML =` XXXXX${transactionid} `;
 document.getElementById("date").innerHTML = ` ${new Date} `;
 
@@ -716,13 +716,13 @@ console.log(`${day}-${month}-${year}`);
 tomorrow()
 
 function gotowhatsapp(){
-let name_of_custemer = document.getElementById("name_of_custemer").innerHTML;
+let name_of_customer = document.getElementById("name_of_customer").innerHTML;
 let addres_add =  document.getElementById("addres_add_se").innerHTML;
 
 let Address_NEAR_BY =  document.getElementById("Address_NEAR_BY").innerHTML;
 let product_name = document.getElementById("product_name").innerHTML ;
 let product_quantity = document.getElementById("product_quantity").innerHTML ;
-let one_product_prise =document.getElementById("one_product_prise").innerHTML ;
+let one_product_price =document.getElementById("one_product_price").innerHTML ;
 let get_discount = document.getElementById("get_discount").innerHTML ;
 let total_product_prize  = document.getElementById("total_product_prize").innerHTML ;
 let transaction_ID = document.getElementById("transaction_ID").innerHTML;
@@ -733,12 +733,12 @@ let transaction_ID = document.getElementById("transaction_ID").innerHTML;
 
 
 var url = "https://wa.me/919834926132?text="
-+ "custemer name :-" + name_of_custemer +  "%0a" + "%0a"
++ "customer name :-" + name_of_customer +  "%0a" + "%0a"
 +"Name of villege :-" + " " + addres_add +  "%0a" + "%0a"
 +  "address:- " + Address_NEAR_BY + "%0a" + "%0a"
 + "product name:- " + product_name + "%0a" + "%0a"
 + "product quantity:- " + product_quantity + "%0a" + "%0a"
-+ "ONE"+ one_product_prise + "%0a" + "%0a"
++ "ONE"+ one_product_price + "%0a" + "%0a"
 + "get discount:- " + `20%` + "%0a" + "%0a"
 +  "TOTAL"  +  total_product_prize  +  "%0a" + "%0a"
 +"date = "+ " " + new Date +  "%0a"  + "order delivery :- within 6 Days"+ "%0a"+ "%0a"
